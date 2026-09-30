@@ -1,14 +1,20 @@
 <div align="center">
 
-<img src="docs/banner.svg" width="100%" alt="Aperture — a camera for the Mac, wearing the iPhone's interface">
+<img src="docs/banner.svg" width="100%" alt="Cappture — a camera for the Mac, wearing the iPhone's interface">
 
 <br><br>
 
 ```bash
-brew install --cask yusufdiallo1/tap/aperture
+brew install --cask yusufdiallo1/tap/cappture
 ```
 
-<a href="https://github.com/yusufdiallo1/aperture/releases/latest"><b>Download the DMG</b></a>
+Already installed? Update with:
+
+```bash
+brew update && brew upgrade --cask cappture
+```
+
+<a href="https://github.com/yusufdiallo1/cappture/releases/latest"><b>Download the DMG</b></a>
 &nbsp;&nbsp;·&nbsp;&nbsp;
 <a href="docs/SETUP.md">Setup guide</a>
 
@@ -34,7 +40,7 @@ brew install --cask yusufdiallo1/tap/aperture
 
 </div>
 
-> **Downloads live here.** Aperture is closed source; the source is kept in a
+> **Downloads live here.** Cappture is closed source; the source is kept in a
 > private repository, because GitHub will not serve a public download from
 > one.
 
@@ -406,21 +412,21 @@ If you decline, captures go to the folder alone and everything still works.
 ## Installing
 
 Download the DMG from
-**[aperture](https://github.com/yusufdiallo1/aperture/releases/latest)**,
-open it, and drag Aperture to Applications.
+**[cappture](https://github.com/yusufdiallo1/cappture/releases/latest)**,
+open it, and drag Cappture to Applications.
 
 ### "Apple could not verify this is free of malware"
 
 If you download the DMG with a browser you will see this:
 
-> **"Aperture 1.7.dmg" Not Opened**
-> Apple could not verify "Aperture 1.7.dmg" is free of malware that may harm
+> **"Cappture 1.7.dmg" Not Opened**
+> Apple could not verify "Cappture 1.7.dmg" is free of malware that may harm
 > your Mac or compromise your privacy.
 > &nbsp;&nbsp; [ Move to Trash ] &nbsp; [ Done ]
 
 **Click Done. Do not click Move to Trash.**
 
-Nothing is wrong with the file. Aperture is not notarized — that requires a paid
+Nothing is wrong with the file. Cappture is not notarized — that requires a paid
 Apple Developer account — so macOS refuses to verify it and says so in the
 strongest wording it has. The same dialog appears for every un-notarized app.
 
@@ -429,35 +435,42 @@ You have two ways past it.
 **The easy way — install with Homebrew instead, and none of this happens:**
 
 ```bash
-brew install --cask yusufdiallo1/tap/aperture
+brew install --cask yusufdiallo1/tap/cappture
 ```
 
 The cask clears the quarantine flag as part of installing, so the app opens on
-the first try.
+the first try. To update later:
+
+```bash
+brew update && brew upgrade --cask cappture
+```
+
+Cappture also updates itself in place from inside the app, so this is only
+needed if you prefer to manage it through Homebrew.
 
 **If you already downloaded the DMG,** open Terminal and run:
 
 ```
-xattr -dr com.apple.quarantine ~/Downloads/Aperture*.dmg
+xattr -dr com.apple.quarantine ~/Downloads/Cappture*.dmg
 ```
 
 Then double-click the DMG again. It will open normally.
 
 ### Letting the app open the first time
 
-After dragging Aperture to Applications, the first launch may be blocked too.
+After dragging Cappture to Applications, the first launch may be blocked too.
 
 1. Open **System Settings**
 2. Click **Privacy & Security** in the left sidebar
 3. Scroll down to the **Security** section
-4. You will see: *"Aperture" was blocked to protect your Mac.*
+4. You will see: *"Cappture" was blocked to protect your Mac.*
 5. Click **Open Anyway**
 6. Enter your password or use Touch ID
 7. Click **Open** in the dialog that follows
 
 macOS remembers this. You only do it once.
 
-An alternative that skips System Settings: find Aperture in Applications,
+An alternative that skips System Settings: find Cappture in Applications,
 **right-click it and choose Open** (not a double-click), then click **Open** in
 the dialog. Right-clicking is what makes macOS offer the choice at all.
 
@@ -471,7 +484,7 @@ what to do when macOS keeps saying no.
 
 ```bash
 ./scripts/make-signing-cert.sh   # once
-./scripts/build.sh               # builds build/Aperture.app
+./scripts/build.sh               # builds build/Cappture.app
 ./scripts/make-dmg.sh            # builds dist/Camera-<version>.dmg
 ```
 
@@ -550,11 +563,11 @@ runs at real time and the sound would drift against the picture immediately.
 1. Open **System Settings**
 2. Click **Privacy & Security** in the left sidebar
 3. Click **Camera**
-4. Turn **Aperture** on
+4. Turn **Cappture** on
 
 Microphone, Photos and Screen Recording live in the same place, each under its
 own heading in that list. **Screen Recording is read once at launch**, so quit
-and reopen Aperture after granting that one — the others take effect
+and reopen Cappture after granting that one — the others take effect
 immediately.
 
 If you built the app yourself and macOS asks every single time, run
@@ -569,7 +582,7 @@ If a file was moved or deleted outside the app, its thumbnail shows a
 placeholder icon.
 
 **Something else** — the app writes a startup trace to
-`~/Library/Containers/com.yusufdiallo.aperture/Data/Library/Logs/Aperture-boot.log`.
+`~/Library/Logs/Aperture-boot.log`.
 Its last line is where things stopped.
 
 ## Known limits
