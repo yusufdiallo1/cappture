@@ -73,11 +73,11 @@
 
   <!-- Install line -->
   <g transform="translate(232 160)">
-    <rect width="360" height="34" rx="8" fill="#000" fill-opacity="0.45" stroke="#FFFFFF" stroke-opacity="0.09"/>
+    <rect width="408" height="34" rx="8" fill="#000" fill-opacity="0.45" stroke="#FFFFFF" stroke-opacity="0.09"/>
     <text x="14" y="22" font-family="ui-monospace,SFMono-Regular,Menlo,monospace"
           font-size="13" fill="#7FCF8F">$</text>
     <text x="30" y="22" font-family="ui-monospace,SFMono-Regular,Menlo,monospace"
-          font-size="13" fill="#D8D8DE">brew install --cask yusufdiallo1/tap/cappture</text>
+          font-size="13" fill="#D8D8DE" textLength="362" lengthAdjust="spacingAndGlyphs">brew install --cask yusufdiallo1/tap/cappture</text>
   </g>
 
   <!-- Mode carousel -->
