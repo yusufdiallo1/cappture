@@ -5,13 +5,14 @@
 <br><br>
 
 ```bash
-brew install --cask yusufdiallo1/tap/cappture
+brew tap yusufdiallo1/tap
+brew install cappture
 ```
 
 Already installed? Update with:
 
 ```bash
-brew update && brew upgrade --cask cappture
+brew upgrade cappture
 ```
 
 <a href="https://github.com/yusufdiallo1/cappture/releases/latest"><b>Download the DMG</b></a>
@@ -435,14 +436,15 @@ You have two ways past it.
 **The easy way — install with Homebrew instead, and none of this happens:**
 
 ```bash
-brew install --cask yusufdiallo1/tap/cappture
+brew tap yusufdiallo1/tap
+brew install cappture
 ```
 
 The cask clears the quarantine flag as part of installing, so the app opens on
 the first try. To update later:
 
 ```bash
-brew update && brew upgrade --cask cappture
+brew upgrade cappture
 ```
 
 Cappture also updates itself in place from inside the app, so this is only
